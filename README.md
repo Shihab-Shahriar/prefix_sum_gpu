@@ -12,6 +12,7 @@ Despite the simplicity, the implementation is pretty fast. Prefix sum is bottlen
 
 Using this measure, *for this specific testcase*, we even outperform Nvidia's own implementations from cub or thrust libraries. On A100 SXM GPU, this implementation processes upto 1499.4 GB data per second, 73.5% of peak bandwidth. `cub::DeviceScan` processes 1438.98 GB/s, 70.5% of peak bandwidth. On my local 4060, the values are 80% and 75% respectively. The figures observed for cub (and thrust) is a bit lower than what I expected, so any suggestion regarding the benchmark code is welcome.
 
+To compile, correct the configurations in Makefile based on your system, then simply do `make` from command line. Optionally, update device's `peak_bandwidth` variable in each file for above metric. 
 
 ### Known Issues
 + Only supports int for now. Does NOT deal with overflow issues. 

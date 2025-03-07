@@ -68,8 +68,8 @@ int main(){
 
     const double avg_time_sec = total_time / NUM_ITERATIONS / 1000.0;
     const double achieved_bandwith = total_data_gb / avg_time_sec;
-    //const double peak_bandwidth = 272.0; // GB/s for 4060
-    const double peak_bandwidth = 2039.0; // GB/s for A100 80GB SXM
+    const double peak_bandwidth = 272.0; // GB/s for 4060
+    //const double peak_bandwidth = 2039.0; // GB/s for A100 80GB SXM
     const double efficiency = (achieved_bandwith / peak_bandwidth) * 100.0;
 
     // speed of light analysis. this kernel is bottlenecked by memory bandwidth
